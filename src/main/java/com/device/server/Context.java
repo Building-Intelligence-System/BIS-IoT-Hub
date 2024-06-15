@@ -2,6 +2,7 @@ package com.device.server;
 
 import com.device.server.config.NettyConfig;
 import com.device.server.repository.TelemetryRepository;
+import com.device.server.repository.TrackerRepository;
 import io.micrometer.common.util.internal.logging.InternalLoggerFactory;
 import io.micrometer.common.util.internal.logging.Slf4JLoggerFactory;
 import io.netty.util.ResourceLeakDetector;
@@ -50,4 +51,7 @@ public class Context implements ApplicationContextAware {
         return getBean("telemetryRepository", TelemetryRepository.class);
     }
 
+    public static TrackerRepository getTrackerRepository() {
+        return getBean("trackerRepository", TrackerRepository.class);
+    }
 }

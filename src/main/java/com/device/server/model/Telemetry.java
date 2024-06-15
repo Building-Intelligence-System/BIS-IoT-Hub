@@ -1,18 +1,17 @@
 package com.device.server.model;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 
 @Entity
 @Table(name = "telemetries")
 public class Telemetry {
-
-    @EmbeddedId
-    private ID id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String imei;
+    private Instant time;
 
     private Boolean valid;
 
@@ -29,12 +28,20 @@ public class Telemetry {
 
     //region GETTERS
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getImei() {
-        return id.imei;
+        return imei;
     }
 
     public Instant getTime() {
-        return id.time;
+        return time;
+    }
+
+    public Boolean getValid() {
+        return valid;
     }
 
     public Boolean isValid() {
@@ -93,20 +100,12 @@ public class Telemetry {
         }
 
         public Builder withImei(final String imei) {
-            if (Telemetry.this.id == null){
-                Telemetry.this.id = new ID();
-            }
-            Telemetry.this.id = new ID(imei, this.build().id.time);
-
-            Telemetry.this.id.imei = imei;
+            Telemetry.this.imei = imei;
             return this;
         }
 
         public Builder withFixTime(final Instant fixTime) {
-            if (Telemetry.this.id == null){
-                Telemetry.this.id = new ID();
-            }
-            Telemetry.this.id.time = fixTime;
+            Telemetry.this.time = fixTime;
             return this;
         }
 
@@ -151,18 +150,4 @@ public class Telemetry {
     }
 
     //endregion BUILDER
-    @Embeddable
-    static  class ID {
-        private String imei;
-        private Instant time;
-
-        public ID() {
-        }
-
-        public ID(String imei, Instant time) {
-            this.imei = imei;
-            this.time = time;
-        }
-    }
-
 }

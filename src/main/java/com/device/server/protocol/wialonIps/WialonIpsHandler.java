@@ -1,5 +1,7 @@
 package com.device.server.protocol.wialonIps;
 
+import com.device.server.Context;
+import com.device.server.model.Tracker;
 import com.device.server.protocol.base.BaseHandler;
 
 public class WialonIpsHandler<T extends WialonIpsPacket> extends BaseHandler<T> {
@@ -15,6 +17,7 @@ public class WialonIpsHandler<T extends WialonIpsPacket> extends BaseHandler<T> 
                 if (authenticate(packet.getIdentifier())) {
                     packet.setAuthorized(true);
                 }
+                Context.getTrackerRepository().save(new Tracker(packet.getIdentifier()));
                 break;
 
             case SD:
