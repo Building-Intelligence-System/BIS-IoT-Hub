@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: bis-device-server
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    show-sql: false
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        order_inserts: true
+        jdbc:
+          batch_size: 500000
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO

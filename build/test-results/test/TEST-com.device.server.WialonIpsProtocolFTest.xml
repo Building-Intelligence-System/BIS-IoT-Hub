@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.device.server.WialonIpsProtocolFTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-15T02:14:08" hostname="pop-os" time="12.763">
+  <properties/>
+  <testcase name="testAuthPacket()" classname="com.device.server.WialonIpsProtocolFTest" time="12.763"/>
+  <system-out><![CDATA[05:13:51.253 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.device.server.WialonIpsProtocolFTest]: WialonIpsProtocolFTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+05:13:51.697 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.device.server.DeviceServerApplication for test class com.device.server.WialonIpsProtocolFTest
+2024-06-15T05:13:53.323+03:00  INFO 108140 --- [bis-device-server] [    Test worker] c.device.server.WialonIpsProtocolFTest   : Starting WialonIpsProtocolFTest using Java 17.0.11 with PID 108140 (started by waliot in /home/waliot/repos/device-server)
+2024-06-15T05:13:53.329+03:00  INFO 108140 --- [bis-device-server] [    Test worker] c.device.server.WialonIpsProtocolFTest   : The following 1 profile is active: "test"
+2024-06-15T05:13:56.125+03:00  INFO 108140 --- [bis-device-server] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-15T05:13:56.290+03:00  INFO 108140 --- [bis-device-server] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 1 JPA repository interface.
+2024-06-15T05:13:56.962+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.testcontainers.images.PullPolicy     : Image pull policy will be performed by: DefaultPullPolicy()
+2024-06-15T05:13:56.969+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.t.utility.ImageNameSubstitutor         : Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2024-06-15T05:13:57.371+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2024-06-15T05:13:57.949+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with Rootless Docker accessed via Unix socket (/run/user/1000/docker.sock)
+2024-06-15T05:13:57.952+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2024-06-15T05:13:57.990+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 26.1.4
+  API Version: 1.45
+  Operating System: Pop!_OS 22.04 LTS
+  Total Memory: 15931 MB
+2024-06-15T05:13:58.024+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.testcontainers/ryuk:0.7.0             : Creating container for image: testcontainers/ryuk:0.7.0
+2024-06-15T05:13:58.221+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.testcontainers/ryuk:0.7.0             : Container testcontainers/ryuk:0.7.0 is starting: 872ead2d768c52bf5cd09cb23a17e4a6910794e0e7831201cea607274398cd79
+2024-06-15T05:13:59.068+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.testcontainers/ryuk:0.7.0             : Container testcontainers/ryuk:0.7.0 started in PT1.043748676S
+2024-06-15T05:13:59.090+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2024-06-15T05:13:59.090+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2024-06-15T05:13:59.092+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2024-06-15T05:13:59.094+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.postgres:12                           : Creating container for image: postgres:12
+2024-06-15T05:13:59.171+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.postgres:12                           : Container postgres:12 is starting: 15fe0c486be262dca73e60f1ef3ccab445cce2e67ae3e390b9161183053e7484
+2024-06-15T05:14:03.279+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.postgres:12                           : Container postgres:12 started in PT4.184460356S
+2024-06-15T05:14:03.280+03:00  INFO 108140 --- [bis-device-server] [    Test worker] tc.postgres:12                           : Container is started (JDBC URL: jdbc:postgresql://localhost:32797/test?loggerLevel=OFF)
+2024-06-15T05:14:03.645+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-15T05:14:03.769+03:00  INFO 108140 --- [bis-device-server] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-15T05:14:03.840+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-15T05:14:04.640+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-15T05:14:04.817+03:00  WARN 108140 --- [bis-device-server] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-15T05:14:05.721+03:00  WARN 108140 --- [bis-device-server] [    Test worker] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.device.server.model.Telemetry$ID
+2024-06-15T05:14:05.723+03:00  WARN 108140 --- [bis-device-server] [    Test worker] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.device.server.model.Telemetry$ID
+2024-06-15T05:14:07.076+03:00  INFO 108140 --- [bis-device-server] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-15T05:14:07.149+03:00  WARN 108140 --- [bis-device-server] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-06-15T05:14:07.151+03:00  WARN 108140 --- [bis-device-server] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "telemetries" does not exist, skipping
+2024-06-15T05:14:07.202+03:00  INFO 108140 --- [bis-device-server] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-15T05:14:07.389+03:00  INFO 108140 --- [bis-device-server] [    Test worker] com.device.server.server.ServerService   : Run WialonIps server on 54321 port.
+2024-06-15T05:14:07.721+03:00  WARN 108140 --- [bis-device-server] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-15T05:14:08.841+03:00  INFO 108140 --- [bis-device-server] [    Test worker] c.device.server.WialonIpsProtocolFTest   : Started WialonIpsProtocolFTest in 16.659 seconds (process running for 19.708)
+2024-06-15T05:14:09.790+03:00  WARN 108140 --- [bis-device-server] [-EPOLL-POOL-4-1] i.netty.channel.DefaultChannelPipeline   : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.lang.UnsatisfiedLinkError: 'int io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH()'
+	at io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH(Native Method) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Errors.<clinit>(Errors.java:62) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-06-15T05:14:13.127+03:00  WARN 108140 --- [bis-device-server] [-EPOLL-POOL-4-1] i.netty.channel.DefaultChannelPipeline   : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.unix.Errors
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe$1.run(AbstractEpollChannel.java:425) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:408) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: 'int io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH()' [in thread "54321-TCP-ACCEPTOR-EPOLL-POOL-4-1"]
+	at io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH(Native Method) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Errors.<clinit>(Errors.java:62) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	... 4 common frames omitted
+
+2024-06-15T05:14:15.752+03:00  WARN 108140 --- [bis-device-server] [-EPOLL-POOL-4-1] i.netty.channel.DefaultChannelPipeline   : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.unix.Errors
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe$1.run(AbstractEpollChannel.java:425) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:408) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: 'int io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH()' [in thread "54321-TCP-ACCEPTOR-EPOLL-POOL-4-1"]
+	at io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH(Native Method) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Errors.<clinit>(Errors.java:62) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	... 4 common frames omitted
+
+2024-06-15T05:14:17.862+03:00  WARN 108140 --- [bis-device-server] [-EPOLL-POOL-4-1] i.netty.channel.DefaultChannelPipeline   : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.unix.Errors
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe$1.run(AbstractEpollChannel.java:425) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:408) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: 'int io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH()' [in thread "54321-TCP-ACCEPTOR-EPOLL-POOL-4-1"]
+	at io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH(Native Method) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Errors.<clinit>(Errors.java:62) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	... 4 common frames omitted
+
+2024-06-15T05:14:21.349+03:00  WARN 108140 --- [bis-device-server] [-EPOLL-POOL-4-1] i.netty.channel.DefaultChannelPipeline   : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+
+java.lang.NoClassDefFoundError: Could not initialize class io.netty.channel.unix.Errors
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe$1.run(AbstractEpollChannel.java:425) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:408) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.UnsatisfiedLinkError: 'int io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH()' [in thread "54321-TCP-ACCEPTOR-EPOLL-POOL-4-1"]
+	at io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods.errorEHOSTUNREACH(Native Method) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Errors.<clinit>(Errors.java:62) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.unix.Socket.accept(Socket.java:403) ~[netty-transport-native-unix-common-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.AbstractEpollServerChannel$EpollServerSocketUnsafe.epollInReady(AbstractEpollServerChannel.java:112) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399) ~[netty-transport-classes-epoll-4.1.110.Final.jar:4.1.110.Final]
+	... 4 common frames omitted
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
